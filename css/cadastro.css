@@ -1,0 +1,28 @@
+.cadastro-box {
+  width: 300px;
+  height: 350px;
+  margin: 150px auto;
+  background: #030307;
+  padding: 40px;
+  align-items: center;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px #dad7d743;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.link a {
+  color: white;
+  text-decoration: none;
+  
+}

@@ -1,0 +1,22 @@
+.topo {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  background: #222;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+th, td {
+  padding: 12px;
+}

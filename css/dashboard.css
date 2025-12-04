@@ -1,0 +1,53 @@
+/* MENU LATERAL */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: #000000;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.4);
+}
+
+.sidebar .logo {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  color: #eee;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 0;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #5d5d5d;
+  transform: translateX(5px);
+}
+
+.sidebar .logout {
+  margin-top: 270px;
+  background: #cc3333;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar .logout:hover {
+  background: #d30000;
+}
+
+/* EMPURRAR O CONTEÚDO */
+body {
+  margin-left: 240px;
+}

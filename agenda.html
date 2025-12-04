@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Agenda</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/agenda.css">
+</head>
+<body onload="verificarLogin(); carregarAgenda(); carregarClientesSelect(); carregarServicosSelect();">
+
+  <div class="topo">
+    <h1>Agenda</h1>
+    <button onclick="logout()">Sair</button>
+  </div>
+
+  <div class="container">
+
+    <h2>Marcar Horário</h2>
+
+    <div class="form">
+      <select id="cliente">
+        <option value="">Selecione um cliente</option>
+      </select>
+
+      <select id="servico">
+        <option value="">Selecione um serviço</option>
+      </select>
+
+      <input type="datetime-local" id="dataHora">
+      <button onclick="salvarAgendamento()">Salvar</button>
+    </div>
+
+    <h2>Horários Marcados</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Serviço</th>
+          <th>Data/Hora</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      <tbody id="listaAgenda"></tbody>
+    </table>
+
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/agenda.js"></script>
+</body>
+</html>
