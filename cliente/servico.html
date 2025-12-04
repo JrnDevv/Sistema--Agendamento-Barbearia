@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Serviços</title>
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/serviços.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body onload="verificarLogin(); carregarServicos();">
+
+  <!-- menu lateral -->
+  <div class="sidebar">
+    <img src="../img/_Barbershop Logo.svg" alt="logo-barbershop">
+
+    <a href="../perfil.html"><i class="fa-solid fa-user"></i> Meu Perfil</a>
+    <a href="../cliente/agenda.html"><i class="fa-regular fa-calendar-days"></i> Agenda</a>
+    <a href="../cliente/servico.html" class="active"><i class="fa-solid fa-scissors"></i> Serviços</a>
+    <button class="logout" onclick="logout()">Sair</button>
+  </div>
+
+ <!--  Aba de serviço -->
+<main class="servicos-container">
+
+  <header class="titulo-servicos">
+    <h1><i class="fa-solid fa-scissors"></i> Serviços Disponíveis</h1>
+    <p>Veja abaixo todos os serviços oferecidos pela barbearia.</p>
+  </header>
+
+  <!-- Caixa onde o JS vai inserir os serviços -->
+  <section class="lista-servicos" id="listaServicos">
+    <!-- Conteúdo carregado dinamicamente -->
+  </section>
+
+</main>
+
+  <!-- SCRIPTS -->
+  <script src="../js/auth.js"></script>
+  <script src="../js/servicos.js"></script>
+</body>
+</html>

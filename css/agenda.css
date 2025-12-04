@@ -1,22 +1,45 @@
 .topo {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  margin-left: 240px; 
   padding: 20px;
 }
 
 .form {
   display: flex;
+  justify-content: center;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
 }
 
 table {
-  width: 100%;
+  width: 80%;
   background: #222;
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 10px;
+  border-collapse: collapse;
+  margin: 0 auto; /* centraliza a tabela */
 }
 
 th, td {
   padding: 12px;
+  text-align: center;
+  color: #fff;
 }
+
+/* AQUI empurramos TODO o conteúdo pra direita */
+.container {
+  margin-left: 210px;  /* distância perfeita da sidebar */
+  padding: 20px;
+}
+
+.container h2 {
+  text-align: center;
+}
+
+
+

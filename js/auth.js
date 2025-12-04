@@ -21,7 +21,7 @@ function createFlakes() {
 function drawFlakes() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = "white";
+    ctx.fillStyle = "gray";
     ctx.beginPath();
 
     for (let flake of flakes) {
@@ -57,3 +57,21 @@ window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 });
+
+
+ // Exemplo: puxando dados do localStorage
+    const user = JSON.parse(localStorage.getItem("usuarioLogado")) || {};
+
+    document.getElementById("nomeUsuario").innerText = user.nome || "Cliente";
+    document.getElementById("nomePerf").innerText = user.nome || "Não informado";
+    document.getElementById("telPerf").innerText = user.telefone || "Não informado";
+    document.getElementById("emailPerf").innerText = user.email || "Não informado";
+
+    // Exemplo de agendamento
+    const ag = JSON.parse(localStorage.getItem("proxAgendamento"));
+
+    document.getElementById("proxAgendamento").innerText =
+      ag ? `${ag.data} às ${ag.horario} — ${ag.servico}` : "Nenhum agendamento encontrado";
+
+
+      

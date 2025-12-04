@@ -1,22 +1,73 @@
-.topo {
+/* ===== ÁREA PRINCIPAL ===== */
+.servicos-container {
+  margin-left: 220px; /* espaço para a sidebar */
+  padding: 30px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza no meio */
+  justify-content: flex-start;
+  color: white;
+}
+
+/* Título */
+.servicos-container h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+/* Lista de serviços */
+.lista-servicos {
+  width: 80%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* Card individual */
+.servico-item {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.form {
+.servico-item:last-child {
+  border-bottom: none;
+}
+
+/* Nome e preço */
+.servico-info {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  flex-direction: column;
 }
 
-table {
-  width: 100%;
-  background: #222;
-  border-radius: 8px;
-  padding: 10px;
+/* Botões */
+.servico-acoes button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-th, td {
-  padding: 12px;
+.btn-editar {
+  background: #005eff;
+  color: white;
+}
+
+.btn-apagar {
+  background: #cc3333;
+  color: white;
+  margin-left: 10px;
+}
+
+.btn-editar:hover {
+  background: #003c9d;
+}
+
+.btn-apagar:hover {
+  background: #a00000;
 }

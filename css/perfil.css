@@ -1,0 +1,83 @@
+.container {
+  margin-left: 240px;   /* distância da sidebar */
+  padding: 20px;
+  display: flex;
+  justify-content: center;   /* centraliza HORIZONTAL */
+}
+
+.profile-card {
+  background: #111827;
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;     /* mantém igual você pediu */
+  align-items: start;
+  width: 600px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  margin-top: 40px;
+    opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlide 0.8s ease forwards;       /* só pra dar um respiro */
+}
+
+
+/* ===========================
+   FOTO DE PERFIL
+=========================== */
+.profile-photo img {
+  width: 150px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+#inputFoto {
+  margin-top: 10px;
+  color: #ccc;
+}
+
+
+/* ===========================
+   INFO DO PERFIL
+=========================== */
+.profile-info p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+
+/* ===========================
+   BOTÕES
+=========================== */
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+
+  background: #000;
+  color: #fff;
+}
+
+button:hover {
+  background: #fff;
+  color: #000;
+}
+
+
+
+
+/* Animação */
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/perfil.css">
+</head>
+<body onload="carregarPerfil()">
+
+
+ <!-- MENU LATERAL -->
+  <div class="sidebar">
+    <img src="../img/_Barbershop Logo.svg" alt="logo-barbershop">
+    <a href="../perfil.html"><i class="fa-solid fa-user"></i> Meu Perfil</a>
+    <a href="../cliente/agenda.html"><i class="fa-regular fa-calendar-days"></i> Agenda</a>
+    <a href="../cliente/servico.html"><i class="fa-solid fa-scissors"></i> Serviços</a>
+    <button class="logout" onclick="logout()">Sair</button>
+  </div>
+
+<div class="container">
+
+  <div class="profile-card">
+    <div class="profile-photo">
+      <img id="fotoPerfil" src="../img/user.png" alt="Foto de Perfil"> br
+      <input type="file" id="inputFoto" accept="image/*">
+    </div>
+
+    <div class="profile-info">
+      <p><strong>Nome:</strong> <span id="perfilNome"></span></p>
+      <p><strong>Telefone:</strong> <span id="perfilTelefone"></span></p>
+      <p><strong>Email:</strong> <span id="perfilEmail"></span></p>
+      <p><strong>Cadastrado em:</strong> <span id="perfilData"></span></p>
+
+      <button onclick="editarPerfil()">Editar Perfil</button>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="../js/perfil.js"></script>
+</body>
+</html>

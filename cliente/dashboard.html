@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body onload="verificarLogin()">
+  <canvas id="snowCanvas"></canvas>
+
+  <!-- MENU LATERAL -->
+  <div class="sidebar">
+    <img src="../img/_Barbershop Logo.svg" alt="logo-barbershop">
+    <a href="../perfil.html"><i class="fa-solid fa-user"></i> Meu Perfil</a>
+    <a href="../cliente/agenda.html"><i class="fa-regular fa-calendar-days"></i> Agenda</a>
+    <a href="../cliente/servico.html"><i class="fa-solid fa-scissors"></i> Serviços</a>
+    <button class="logout" onclick="logout()">Sair</button>
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+<div class="dashboard">
+
+    <h1>Bem-vindo, <span id="nomeUsuario"></span></h1>
+    <p class="sub">Acompanhe seus agendamentos, notificações e informações</p>
+
+    <div class="cards">
+
+        <!-- Próximo agendamento -->
+        <div class="card fade-slide">
+            <h3><i class="fa-solid fa-calendar-check"></i> Próximo Agendamento</h3>
+            <p id="proxAgendamento">Carregando...</p>
+        </div>
+
+        <!-- Serviços favoritos -->
+        <div class="card fade-slide delay1">
+            <h3><i class="fa-solid fa-heart"></i> Serviços Favoritos</h3>
+            <ul class="lista-favoritos" id="servicosFav">
+                <li>Corte Masculino</li>
+                <li>Barba completa</li>
+            </ul>
+        </div>
+
+        <!-- Dados pessoais -->
+        <div class="card fade-slide delay2">
+            <h3><i class="fa-solid fa-user"></i> Seus Dados</h3>
+            <p><strong>Nome:</strong> <span id="nomePerf"></span></p>
+            <p><strong>Email:</strong> <span id="emailPerf"></span></p>
+            <p><strong>Telefone:</strong> <span id="telPerf"></span></p>
+        </div>
+
+        <!-- Área separada somente para telefone -->
+        <div class="card fade-slide delay3">
+            <h3><i class="fa-solid fa-phone"></i> Telefone</h3>
+            <p id="telArea"></p>
+            <button class="btn-editar">Atualizar Telefone</button>
+        </div>
+
+        <!-- Histórico de agendamentos -->
+        <div class="card fade-slide delay4">
+            <h3><i class="fa-solid fa-clock-rotate-left"></i> Histórico</h3>
+            <ul id="historicoList">
+                <li>Nenhum histórico encontrado.</li>
+            </ul>
+        </div>
+
+        <!-- Notificações -->
+        <div class="card fade-slide delay5">
+            <h3><i class="fa-solid fa-bell"></i> Notificações</h3>
+            <ul id="notificacoesList">
+                <li>Sem notificações ainda.</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+  <script src="../js/snow.js"></script>
+  <script src="../js/auth.js"></script>
+
+
+</body>
+</html>
