@@ -3,43 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <title>Serviços</title>
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/servicos.css">
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/serviços.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body onload="verificarLogin(); carregarServicos();">
 
-  <div class="topo">
-    <h1>Serviços</h1>
-    <button onclick="logout()">Sair</button>
+ <!-- MENU LATERAL -->
+  <div class="sidebar">
+    <img src="../img/_Barbershop Logo.svg" alt="logo-barbershop">
+    <a href="../perfil.html"><i class="fa-solid fa-user"></i> Meu Perfil</a>
+    <a href="../cliente/dashboard.html"><i class="fa-solid fa-user"></i> Dashboard</a>
+    <a href="../cliente/agenda.html"><i class="fa-regular fa-calendar-days"></i> Agenda</a>
+    <a href="../cliente/servico.html"><i class="fa-solid fa-scissors"></i> Serviços</a>
+    <button class="logout" onclick="logout()">Sair</button>
   </div>
+ <!--  Aba de serviço -->
+<main class="servicos-container">
 
-  <div class="container">
+  <header class="titulo-servicos">
+    <h1><i class="fa-solid fa-scissors"></i> Serviços Disponíveis</h1>
+    <p>Veja abaixo todos os serviços oferecidos pela barbearia.</p>
+  </header>
 
-    <h2>Cadastrar Serviço</h2>
+  <!-- Caixa onde o JS vai inserir os serviços -->
+  <section class="lista-servicos" id="listaServicos">
+    <!-- Conteúdo carregado dinamicamente -->
+  </section>
 
-    <div class="form">
-      <input type="text" id="nomeServico" placeholder="Nome do serviço">
-      <input type="number" id="precoServico" placeholder="Preço (R$)">
-      <button onclick="salvarServico()">Salvar</button>
-    </div>
+</main>
 
-    <h2>Lista de Serviços</h2>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Preço</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-
-      <tbody id="listaServicos"></tbody>
-    </table>
-
-  </div>
-
-  <script src="js/auth.js"></script>
-  <script src="js/servicos.js"></script>
+  <!-- SCRIPTS -->
+  <script src="../js/auth.js"></script>
+  <script src="../js/servicos.js"></script>
 </body>
 </html>

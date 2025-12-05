@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.4);
+  box-shadow: 2px 0 10px rgba(48, 48, 48, 0.4);
 }
 
 .sidebar .logo {
@@ -33,7 +33,7 @@
 }
 
 .sidebar .logout {
-  margin-top: 270px;
+  margin-top: 0px;
   background: #cc3333;
   color: white;
   border: none;
@@ -58,6 +58,14 @@ body {
   padding: 40px;
 }
 
+#title-dash , p {
+  color: #000000;
+}
+
+#title-dash , h1 {
+  color: #000000;
+}
+
 .dashboard h1 {
   font-size: 34px;
   margin: 0;
@@ -77,10 +85,10 @@ body {
 
 /* CARD */
 .card {
-  background: #0b0f1a;
+  background: #000000;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 10px #00000046;
+  box-shadow: 0 0 10px #2e2e2e46;
   backdrop-filter: blur(6px);
   transition: 0.3s;
 }
@@ -138,4 +146,34 @@ body {
 /* Gráfico ocupa largura total */
 .graph-card {
   grid-column: span 2;
+}
+
+
+.contatos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.contato-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f4f4f4;
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.contato-item i {
+    font-size: 20px;
+}
+
+.contato-item:hover {
+    background: #e2e2e2;
+    transform: translateX(3px);
 }

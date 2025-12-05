@@ -11,10 +11,11 @@
 <body onload="verificarLogin()">
   <canvas id="snowCanvas"></canvas>
 
-  <!-- MENU LATERAL -->
+ <!-- MENU LATERAL -->
   <div class="sidebar">
     <img src="../img/_Barbershop Logo.svg" alt="logo-barbershop">
     <a href="../perfil.html"><i class="fa-solid fa-user"></i> Meu Perfil</a>
+    <a href="../cliente/dashboard.html"><i class="fa-solid fa-user"></i> Dashboard</a>
     <a href="../cliente/agenda.html"><i class="fa-regular fa-calendar-days"></i> Agenda</a>
     <a href="../cliente/servico.html"><i class="fa-solid fa-scissors"></i> Serviços</a>
     <button class="logout" onclick="logout()">Sair</button>
@@ -51,12 +52,33 @@
             <p><strong>Telefone:</strong> <span id="telPerf"></span></p>
         </div>
 
-        <!-- Área separada somente para telefone -->
-        <div class="card fade-slide delay3">
-            <h3><i class="fa-solid fa-phone"></i> Telefone</h3>
-            <p id="telArea"></p>
-            <button class="btn-editar">Atualizar Telefone</button>
-        </div>
+     <!-- Área de Contato da Barbearia -->
+<div class="card fade-slide delay3">
+    <h3><i class="fa-solid fa-phone"></i> Contato da Barbearia</h3>
+
+    <div class="contatos-lista">
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/5511999999999" target="_blank" class="contato-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/suaBarbearia" target="_blank" class="contato-item">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+
+        <!-- Ligação direta -->
+        <a href="tel:+5511999999999" class="contato-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>Ligar Agora</span>
+        </a>
+
+    </div>
+</div>
+
 
         <!-- Histórico de agendamentos -->
         <div class="card fade-slide delay4">
