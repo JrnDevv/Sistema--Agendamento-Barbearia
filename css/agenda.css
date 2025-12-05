@@ -18,7 +18,8 @@
 
 table {
   width: 80%;
-  background: #222;
+   background: #00030f8b;
+    box-shadow: 0 0 10px #ffffff46;
   border-radius: 5px;
   padding: 10px;
   border-collapse: collapse;
@@ -39,6 +40,10 @@ th, td {
 
 .container h2 {
   text-align: center;
+}
+
+button {
+  color: ;
 }
 
 

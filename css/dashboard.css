@@ -59,11 +59,11 @@ body {
 }
 
 #title-dash , p {
-  color: #000000;
+  color: #ffffff;
 }
 
 #title-dash , h1 {
-  color: #000000;
+  color: #ffffff;
 }
 
 .dashboard h1 {
@@ -85,10 +85,10 @@ body {
 
 /* CARD */
 .card {
-  background: #000000;
+  background: #00030f6d;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 10px #2e2e2e46;
+  box-shadow: 0 0 10px #ffffff46;
   backdrop-filter: blur(6px);
   transition: 0.3s;
 }
@@ -164,7 +164,7 @@ body {
     padding: 12px 15px;
     border-radius: 8px;
     text-decoration: none;
-    color: #333;
+    color: #000000;
     font-weight: 600;
     transition: 0.2s ease;
 }
