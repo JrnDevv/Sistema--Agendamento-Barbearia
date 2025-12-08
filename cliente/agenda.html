@@ -9,37 +9,59 @@
 
 </head>
 <body onload="verificarLogin(); carregarAgenda(); carregarClientesSelect(); carregarServicosSelect();">
-    <canvas id="snowCanvas"></canvas>
+    <canvas id="meshCanvas"></canvas>
 
  <!-- MENU LATERAL -->
   <div class="sidebar">
     <img src="../img/_Barbershop Logo.svg" alt="logo-barbershop">
-    <a href="../perfil.html"><i class="fa-solid fa-user"></i> Meu Perfil</a>
+    <a href="../cliente/"><i class="fa-solid fa-user"></i> Meu Perfil</a>
     <a href="../cliente/dashboard.html"><i class="fa-solid fa-user"></i> Dashboard</a>
     <a href="../cliente/agenda.html"><i class="fa-regular fa-calendar-days"></i> Agenda</a>
     <a href="../cliente/servico.html"><i class="fa-solid fa-scissors"></i> Serviços</a>
     <button class="logout" onclick="logout()">Sair</button>
   </div>
-  
-  <div class="container">
+<div class="container">
 
+  <div class="page-header">
     <h2>Marcar Horário</h2>
+  </div>
 
-    <div class="form">
-      <select id="cliente">
-        <option value="">Selecione um Barbeiro</option>
-      </select>
+ <div class="card-agendamento">
 
-      <select id="servico">
-        <option value="">Selecione um serviço</option>
-      </select>
+    <h3><i class="fa-solid fa-calendar-check"></i> Agendar Horário</h3>
 
-      <input type="datetime-local" id="dataHora">
-      <button onclick="salvarAgendamento()">Salvar</button>
+    <div class="campo">
+        <label><i class="fa-solid fa-user"></i> Cliente</label>
+        <select id="cliente">
+            <option value="">Selecione um Barbeiro</option>
+        </select>
     </div>
 
-    <h2>Horários Marcados</h2>
+    <div class="campo">
+        <label><i class="fa-solid fa-scissors"></i> Serviço</label>
+        <select id="servico">
+            <option value="">Selecione um Serviço</option>
+        </select>
+    </div>
 
+   <div class="campo">
+    <label><i class="fa-regular fa-clock"></i> Horário</label>
+    <select id="horario"></select>
+</div>
+
+
+    <button class="btn-salvar" onclick="salvarAgendamento()">
+        <i class="fa-solid fa-check"></i> Salvar Agendamento
+    </button>
+
+</div>
+
+
+  <div class="page-header">
+    <h2>Horários Marcados</h2>
+  </div>
+
+  <div class="table-box">
     <table>
       <thead>
         <tr>
@@ -52,8 +74,10 @@
 
       <tbody id="listaAgenda"></tbody>
     </table>
-
   </div>
+
+</div>
+
 
   <script src="../js/auth.js"></script>
 <script src="../js/snow.js"></script>
