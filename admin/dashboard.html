@@ -8,37 +8,36 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body onload="verificarLogin()">
-  <canvas id="snowCanvas"></canvas>
+<body>
+<canvas id="meshCanvas"></canvas>
 
  <!-- MENU LATERAL -->
   <div class="sidebar">
     <img src="../img/_Barbershop Logo.svg" alt="logo-barbershop">
-    <a href="../perfil.html"><i class="fa-solid fa-user"></i> Meu Perfil</a>
-    <a href="../cliente/dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a>
-    <a href="../cliente/agenda.html"><i class="fa-regular fa-calendar-days"></i> Agenda</a>
-    <a href="../cliente/servico.html"><i class="fa-solid fa-scissors"></i> Serviços</a>
+    <a href="../admin/perfil.html"><i class="fa-solid fa-user"></i> Meu Perfil</a>
+    <a href="../admin/dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a>
+    <a href="../admin/agenda.html"><i class="fa-regular fa-calendar-days"></i> Agenda</a>
+    <a href="../admin/servico.html"><i class="fa-solid fa-scissors"></i> Serviços</a>
     <button class="logout" onclick="logout()">Sair</button>
   </div>
 
   <!-- CONTEÚDO PRINCIPAL -->
 <div class="dashboard">
-    <div  id="title-dash">
+
     <h1>Bem-vindo, <span id="nomeUsuario"></span></h1>
-    <p>Acompanhe seus agendamentos, notificações e informações</p>
-    </div>
+    <p class="sub">Acompanhe seus agendamentos, notificações e informações</p>
 
     <div class="cards">
 
         <!-- Próximo agendamento -->
         <div class="card fade-slide">
-            <h3><i class="fa-solid fa-calendar-check"></i> Próximo Agendamento</h3>
+            <h3><i class="fa-solid fa-calendar-check"></i> Todos os Agendamento</h3>
             <p id="proxAgendamento">Carregando...</p>
         </div>
 
         <!-- Serviços favoritos -->
         <div class="card fade-slide delay1">
-            <h3><i class="fa-solid fa-heart"></i> Serviços Favoritos</h3>
+            <h3><i class="fa-solid fa-heart"></i> Agendamentos futuros</h3>
             <ul class="lista-favoritos" id="servicosFav">
                 <li>Corte Masculino</li>
                 <li>Barba completa</li>
@@ -47,15 +46,13 @@
 
         <!-- Dados pessoais -->
         <div class="card fade-slide delay2">
-            <h3><i class="fa-solid fa-user"></i> Seus Dados</h3>
-            <p><strong>Nome:</strong> <span id="nomePerf"></span></p>
-            <p><strong>Email:</strong> <span id="emailPerf"></span></p>
-            <p><strong>Telefone:</strong> <span id="telPerf"></span></p>
+            <h3><i class="fa-solid fa-user"></i> Total de clientes cadastrados</h3>
+            <p><strong>4245</strong> <span id="nomePerf"></span></p>
         </div>
 
      <!-- Área de Contato da Barbearia -->
 <div class="card fade-slide delay3">
-    <h3><i class="fa-solid fa-phone"></i> Contato da Barbearia</h3>
+    <h3><i class="fa-solid fa-phone"></i> Contatos da Barbearia</h3>
 
     <div class="contatos-lista">
 
@@ -79,7 +76,6 @@
 
     </div>
 </div>
-
 
         <!-- Histórico de agendamentos -->
         <div class="card fade-slide delay4">
