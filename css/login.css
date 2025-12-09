@@ -1,5 +1,5 @@
 .login-box {
-  width: 300px;
+  width: 330px;
   height: 300px;
   margin: 150px auto;
   background: #030307;
@@ -11,7 +11,8 @@
 }
 
 input {
-  width: 100%;
+  width: 90%;
+  align-items: center;
   margin-bottom: 15px;
 }
 
@@ -23,4 +24,10 @@ img {
 .link a {
   color: white;
   text-decoration: none;
+}
+
+button:hover {
+    background: #b9962e;
+  transform: scale(1.05);
+  color: black;
 }
