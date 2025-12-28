@@ -11,20 +11,23 @@
 <body>
 <canvas id="meshCanvas"></canvas>
 
- <!-- MENU LATERAL -->
-  <div class="sidebar">
-    <img src="../img/_Barbershop Logo.svg" alt="logo-barbershop">
-    <a href="../cliente/perfil.html"><i class="fa-solid fa-user"></i> Meu Perfil</a>
-    <a href="../cliente/dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a>
-    <a href="../cliente/agenda.html"><i class="fa-regular fa-calendar-days"></i> Agenda</a>
-    <a href="../cliente/servico.html"><i class="fa-solid fa-scissors"></i> Serviços</a>
-    <button class="logout" onclick="logout()">Sair</button>
-  </div>
+<header class="header">
+  <div class="logo"><img src="/img/_Barbershop Logo.svg" alt=""></div>
+
+<nav>
+    <a href="/cliente/dashboard.html">Home</a>
+    <a href="/cliente/servico.html">Serviços</a>
+    <a href="/cliente/agenda.html">Agenda</a>
+  <a href="/admin/perfil.html" class="user-btn">
+  <i class="fa-solid fa-user"></i>
+</a>
+  </nav>
+</header>
 
   <!-- CONTEÚDO PRINCIPAL -->
 <div class="dashboard">
 
-    <h1>Bem-vindo, <span id="nomeUsuario"></span></h1>
+    <h1>Bem-vindo,<span id="nomeUsuario"></span></h1>
     <p class="sub">Acompanhe seus agendamentos, notificações e informações</p>
 
     <div class="cards">

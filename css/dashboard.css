@@ -1,8 +1,4 @@
 
-/* EMPURRAR O CONTEÚDO */
-body {
-  margin-left: 240px;
-}
 
 /* DASHBOARD */
 .dashboard {
@@ -17,10 +13,14 @@ body {
 #title-dash , h1 {
   color: #ffffff;
 }
+  .sub {
+     text-align: center;
+  }
 
 .dashboard h1 {
   font-size: 34px;
   margin: 0;
+  text-align: center;
 }
 
 .dashboard .sub {
@@ -31,17 +31,24 @@ body {
 /* CARDS GRID */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
   gap: 25px;
+
+  max-width: 1500px;   /* limite máximo */
+  width: 100%;         /* ocupa o container */
+  margin: 0 auto;      /* centraliza */
+
+  /* remove altura fixa */
 }
+
 
 /* CARD */
 .card {
   background: #0000006d;
   padding: 20px;
   border-radius: 12px;
-      box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  border: 1px solid rgba(212, 175, 55, 0.3);
   backdrop-filter: blur(6px);
   transition: 0.3s;
 }
@@ -127,5 +134,5 @@ body {
 
 .contato-item:hover {
   background: #B8860B;
-    transform: translateX(3px);
+  transform: translateX(3px);
 }

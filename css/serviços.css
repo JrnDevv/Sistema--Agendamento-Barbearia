@@ -1,6 +1,5 @@
 /* ===== ÁREA PRINCIPAL ===== */
 .servicos-container {
-  margin-left: 220px; /* espaço para a sidebar */
   padding: 30px;
   min-height: 100vh;
   display: flex;

@@ -1,9 +1,10 @@
 /* AJUSTE DO CONTAINER */
 .container {
-  margin-left: 200px;
-  padding: 20px;
+  min-height: 100vh;          /* ocupa a tela toda */
   display: flex;
-  justify-content: center;
+  align-items: center;        /* eixo vertical */
+  justify-content: center;    /* eixo horizontal */
+  padding: 20px;
 }
 
 /* CARD EM DUAS COLUNAS */
