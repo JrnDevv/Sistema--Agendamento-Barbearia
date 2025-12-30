@@ -1,35 +1,94 @@
-.cadastro-box {
-  width: 300px;
-  height: 350px;
-  margin: 150px auto;
-  background: #030307;
-  padding: 40px;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Centralização */
+body {
+  min-height: 100vh;
+  display: flex;
   align-items: center;
-  border-radius: 10px;
+  justify-content: center;
+  background: #000;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Caixa de cadastro */
+.cadastro-box {
+  width: 100%;
+  max-width: 360px;
+  background: #030307;
+  padding: 35px 30px;
+  border-radius: 16px;
   text-align: center;
-  box-shadow: 0 0 10px #dad7d743;
+  margin-bottom: 50px;
+  box-shadow: 0 10px 30px rgba(218, 215, 215, 0.25);
+}
+
+/* Logo */
+.cadastro-box img {
+  width: 90px;
+  height: 90px;
   margin-bottom: 20px;
 }
 
-input {
-  width: 90%;
+/* Inputs */
+.cadastro-box input {
+  width: 100%;
+  padding: 12px 14px;
   margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
 }
 
-img {
-  height: 100px;
-  width: 100px;
+/* Botão */
+.cadastro-box button {
+  width: 100%;
+  padding: 12px;
+  background: #D4AF37;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.cadastro-box button:hover {
+  background: #b9962e;
+  transform: scale(1.03);
+  color: #000;
+}
+
+/* Link */
+.link {
+  margin-top: 15px;
 }
 
 .link a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  
+  font-size: 14px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
 }
 
+.link a:hover {
+  opacity: 1;
+}
 
-button:hover {
-    background: #b9962e;
-  transform: scale(1.05);
-  color: black;
+/* 📱 Mobile */
+@media (max-width: 480px) {
+  .cadastro-box {
+    padding: 30px 20px;
+  }
+
+  .cadastro-box img {
+    width: 75px;
+    height: 75px;
+  }
 }

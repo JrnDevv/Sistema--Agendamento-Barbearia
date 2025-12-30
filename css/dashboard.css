@@ -1,21 +1,16 @@
-
-
 /* DASHBOARD */
 .dashboard {
   padding: 40px;
 }
 
-
-#title-dash , p {
-  color: #F5DEB3;
-}
-
-#title-dash , h1 {
+/* TITULOS */
+#title-dash h1 {
   color: #ffffff;
 }
-  .sub {
-     text-align: center;
-  }
+
+#title-dash p {
+  color: #F5DEB3;
+}
 
 .dashboard h1 {
   font-size: 34px;
@@ -23,24 +18,29 @@
   text-align: center;
 }
 
-.dashboard .sub {
+.sub {
+  text-align: center;
   opacity: 0.7;
   margin-bottom: 30px;
 }
 
-/* CARDS GRID */
+/* GRID DE CARDS */
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
   gap: 25px;
 
-  max-width: 1500px;   /* limite máximo */
-  width: 100%;         /* ocupa o container */
-  margin: 0 auto;      /* centraliza */
-
-  /* remove altura fixa */
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
 }
 
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* CARD */
 .card {
@@ -57,15 +57,34 @@
   transform: translateY(-5px);
 }
 
-/* ANIMAÇÃO FADE + SLIDE */
+/* CARD MOBILE */
+@media (max-width: 768px) {
+  .card {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 14px;
+    border-radius: 10px;
+  }
+}
+
+/* ANIMAÇÃO */
 .fade-slide {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeSlide .8s forwards;
+  animation: fadeSlide 0.8s forwards;
 }
 
-.fade-slide.delay1 { animation-delay: .2s; }
-.fade-slide.delay2 { animation-delay: .4s; }
+.fade-slide.delay1 {
+  animation-delay: 0.2s;
+}
+
+.fade-slide.delay2 {
+  animation-delay: 0.4s;
+}
 
 @keyframes fadeSlide {
   to {
@@ -74,62 +93,63 @@
   }
 }
 
-/* LISTA */
-.lista-favoritos {
-  padding-left: 20px;
+/* LISTAS */
+.card ul {
+  padding-left: 18px;
 }
 
-
-/* Botão editar */
+/* BOTÃO EDITAR */
 .btn-editar {
   margin-top: 10px;
   padding: 10px;
   width: 100%;
   border: none;
   background: #1a1a1a;
-  color: rgb(0, 0, 0);
+  color: #000000;
   border-radius: 8px;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .btn-editar:hover {
-    background: #b9962e;
+  background: #b9962e;
   transform: scale(1.05);
 }
 
-/* Lista interna */
-.card ul {
-  padding-left: 18px;
-}
-
-/* Gráfico ocupa largura total */
+/* CARD GRÁFICO */
 .graph-card {
   grid-column: span 2;
 }
 
+@media (max-width: 1024px) {
+  .graph-card {
+    grid-column: span 1;
+  }
+}
+
+/* CONTATOS */
 .contatos-lista {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
 }
 
 .contato-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #D4AF37;
-    padding: 12px 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #000000;
-    font-weight: 600;
-    transition: 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #D4AF37;
+  padding: 12px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  transition: 0.2s ease;
 }
 
 .contato-item i {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .contato-item:hover {

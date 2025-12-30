@@ -1,34 +1,44 @@
+/* RESET / BASE */
 body {
   margin: 0;
   padding: 0;
   background: #000000;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-   padding-top: 80px; 
-
+  color: #ffffff;
+   font-family: 'Montserrat', sans-serif;
+  padding-top: 90px; /* espaço para header fixo */
 }
 
-input, button, select {
+/* Ajuste para celular */
+@media (max-width: 480px) {
+  body {
+    padding-top: 110px;
+  }
+}
+
+input,
+button,
+select {
   padding: 10px;
-  border-radius: 6px; 
+  border-radius: 6px;
   border: none;
 }
 
+/* BOTÕES */
 button {
   background: #D4AF37;
   color: #000000;
   font-weight: bold;
   cursor: pointer;
   margin-bottom: 10px;
-
+  transition: 0.3s;
 }
 
 button:hover {
   background: #B8860B;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
-
+/* CANVAS BACKGROUND */
 #meshCanvas {
   position: fixed;
   inset: 0;
@@ -38,13 +48,15 @@ button:hover {
   pointer-events: none;
 }
 
+/* HEADER */
 .header {
   position: fixed;
   top: 15px;
   left: 50%;
   transform: translateX(-50%);
 
-  width: 620px;              /* largura correta */
+  width: 95%;
+  max-width: 620px;
   height: 70px;
 
   padding: 0 20px;
@@ -59,11 +71,10 @@ button:hover {
   border: 1px solid rgba(212, 175, 55, 0.3);
 
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
   z-index: 1000;
 }
 
+/* LOGO */
 .logo {
   display: flex;
   align-items: center;
@@ -71,9 +82,9 @@ button:hover {
 
 .logo img {
   height: 50px;
-  width: auto;
 }
 
+/* NAV */
 .header nav {
   display: flex;
   justify-content: center;
@@ -88,7 +99,7 @@ button:hover {
   padding: 5px 0;
 }
 
-/* linha dourada no hover */
+/* Linha dourada no hover */
 .header nav a::after {
   content: "";
   position: absolute;
@@ -104,12 +115,10 @@ button:hover {
   width: 100%;
 }
 
-
 /* BOTÃO LOGOUT */
 .header .logout {
   background: #D4AF37;
-  color: #000;
-  border: none;
+  color: #000000;
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
@@ -120,52 +129,23 @@ button:hover {
   background: #B8860B;
 }
 
-/* RESPONSIVO */
+/* HEADER RESPONSIVO */
 @media (max-width: 768px) {
   .header {
-    width: 95%;
-    padding: 0 15px;
+    height: auto;
+    padding: 12px 15px;
+  }
+
+  .header nav {
+    gap: 15px;
   }
 
   .header nav a {
-    font-size: 16px;
+    font-size: 14px;
   }
-}
 
-/* CARDS GRID */
-.cards {
-  display: grid;
- grid-template-columns: repeat(2, minmax(200px, 1fr));
-  gap: 25px;
-}
-
-/* CARD */
-.card {
-  background: #00030f6d;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px #ffffff46;
-  backdrop-filter: blur(6px);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* ANIMAÇÃO FADE + SLIDE */
-.fade-slide {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeSlide .8s forwards;
-}
-
-.fade-slide.delay1 { animation-delay: .2s; }
-.fade-slide.delay2 { animation-delay: .4s; }
-
-@keyframes fadeSlide {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .header .logout {
+    padding: 6px 12px;
+    font-size: 14px;
   }
 }

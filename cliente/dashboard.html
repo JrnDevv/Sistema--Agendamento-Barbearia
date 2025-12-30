@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/dashboard.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -18,7 +21,7 @@
     <a href="/cliente/dashboard.html">Home</a>
     <a href="/cliente/servico.html">Serviços</a>
     <a href="/cliente/agenda.html">Agenda</a>
-  <a href="/admin/perfil.html" class="user-btn">
+  <a href="/cliente/perfil.html" class="user-btn">
   <i class="fa-solid fa-user"></i>
 </a>
   </nav>
@@ -27,15 +30,15 @@
   <!-- CONTEÚDO PRINCIPAL -->
 <div class="dashboard">
 
-    <h1>Bem-vindo,<span id="nomeUsuario"></span></h1>
+    <h1>Bem-vindo<span id="nomeUsuario"></span></h1>
     <p class="sub">Acompanhe seus agendamentos, notificações e informações</p>
 
     <div class="cards">
 
         <!-- Próximo agendamento -->
         <div class="card fade-slide">
-            <h3><i class="fa-solid fa-calendar-check"></i> Próximo Agendamento</h3>
-            <p id="proxAgendamento">Carregando...</p>
+            <h3><i class="fa-solid fa-calendar-check"></i> Seus agendamentos</h3>
+            <p id="proxAgendamento">Nenhum agendamento encontrado</p>
         </div>
 
         <!-- Serviços favoritos -->
@@ -92,9 +95,9 @@
 
         <!-- Notificações -->
         <div class="card fade-slide delay5">
-            <h3><i class="fa-solid fa-bell"></i> Notificações</h3>
+            <h3> <i class="fa-solid fa-location-dot"></i> Localização</h3>
             <ul id="notificacoesList">
-                <li>Sem notificações ainda.</li>
+                <li>Rua das Palmeiras, nº 245 – Bairro Jardim Central Cidade de Nova Aurora – SP CEP: 12345-678</li>
             </ul>
         </div>
 
